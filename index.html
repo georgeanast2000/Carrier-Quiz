@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerQuest</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <div class="quiz-container">
+            <h1>CareerQuest</h1>
+            <p class="subtitle">Διαδραστικό παιχνίδι επαγγελματικού προσανατολισμού για μαθητές λυκείου.</p>
+            <p>Απάντησε σε ερωτήσεις και σενάρια. Στο τέλος θα δεις ενδεικτικό προφίλ δεξιοτήτων και πιθανές επαγγελματικές κατευθύνσεις.</p>
+            
+            <div class="top-actions">
+                <button id="start-btn" class="start-btn">Ξεκίνα</button>
+            </div>
+            
+            <p class="note">Σημείωση: Το CareerQuest είναι εκπαιδευτικό εργαλείο διερεύνησης. Δεν αποτελεί επίσημο ψυχομετρικό τεστ.</p>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('start-btn').addEventListener('click', () => {
+            localStorage.removeItem('careerquest_skills');
+            localStorage.removeItem('careerquest_answers');
+            window.location.href = 'quiz.html';
+        });
+    </script>
+</body>
+</html>
