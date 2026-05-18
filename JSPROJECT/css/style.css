@@ -1,0 +1,135 @@
+/* ==========================================================================
+   Γενικές Ρυθμίσεις & Αρχικό Background (index.html)
+   ========================================================================== */
+body {
+    /* Φόντο για την πρώτη σελίδα - Σταθερή εικόνα επαγγελματικής εξέλιξης/γραφείου */
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), 
+                url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1470&auto=format&fit=crop') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* ==========================================================================
+   Το "Γυάλινο" Πλαίσιο που προστατεύει το κείμενο
+   ========================================================================== */
+.quiz-container {
+    background: rgba(255, 255, 255, 0.15); /* Ημιδιαφανές λευκό */
+    backdrop-filter: blur(12px); /* Θολώνει το background πίσω από το πλαίσιο */
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.25); /* Λεπτό κομψό περίγραμμα */
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 650px;
+    padding: 40px;
+    text-align: center;
+    color: #ffffff; /* Όλα τα βασικά γράμματα γίνονται λευκά */
+}
+
+/* ==========================================================================
+   Κείμενα Πρώτης Σελίδας
+   ========================================================================== */
+.quiz-container h1 {
+    font-size: 38px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); /* Σκιά για να "πετάγεται" ο τίτλος */
+    letter-spacing: 1px;
+}
+
+.quiz-container .subtitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.quiz-container p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #f8fafc; /* Απαλό off-white */
+}
+
+.quiz-container .disclaimer, 
+.quiz-container .note {
+    font-size: 14px;
+    color: #cbd5e1; /* Πιο διακριτικό γκρι για τη σημείωση */
+    margin-top: 30px;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   Το Εντυπωσιακό Start Button
+   ========================================================================== */
+.start-btn {
+    background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%); /* Έντονο, φωτεινό κυανό/μπλε */
+    color: white;
+    border: none;
+    border-radius: 50px; /* Στρογγυλεμένο στυλ χάπι */
+    padding: 16px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 180, 219, 0.4);
+    transition: all 0.3s ease;
+    display: inline-block;
+    width: auto; /* Δεν πιάνει όλο το πλάτος, γίνεται μακρόστενο και κομψό */
+    margin: 10px auto;
+}
+
+.start-btn:hover {
+    transform: translateY(-3px); /* Ανασηκώνεται ελαφρώς */
+    box-shadow: 0 6px 20px rgba(0, 180, 219, 0.6);
+    filter: brightness(1.1);
+}
+
+.start-btn:active {
+    transform: translateY(1px);
+}
+
+/* ==========================================================================
+   ΔΙΟΡΘΩΜΕΝΟ: Background & Ρυθμίσεις για τη Σελίδα του Quiz (quiz.html)
+   ========================================================================== */
+body.quiz-page {
+    /* Χρήση μόνιμης high-res εικόνας (Abstract Tech/Network) που φορτώνει εγγυημένα */
+    background: linear-gradient(rgba(30, 41, 59, 0.5), rgba(30, 41, 59, 0.7)), 
+                url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1472&auto=format&fit=crop') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Προσαρμογή του container μέσα στο quiz για να κάνει ωραία αντίθεση με το νέο φόντο */
+body.quiz-page .quiz-container,
+body.quiz-page .panel { 
+    background: rgba(255, 255, 255, 0.95); /* Καθαρό, φωτεινό λευκό πλαίσιο ερωτήσεων */
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: #333333; /* Σκούρα γράμματα για να διαβάζονται τέλεια οι ερωτήσεις */
+}
+
+/* Εξασφαλίζουμε ότι οι τίτλοι ερωτήσεων μέσα στο quiz θα έχουν σκούρο χρώμα */
+body.quiz-page .quiz-container h1,
+body.quiz-page .quiz-container h2,
+body.quiz-page .panel h1,
+body.quiz-page .panel h2 {
+    color: #1e293b;
+    text-shadow: none; /* Αφαίρεση της λευκής σκιάς για καθαρό κείμενο */
+}
+
+/* Εξασφαλίζουμε ότι οι παράγραφοι και οι επιλογές μέσα στο quiz είναι ευδιάκριτες */
+body.quiz-page .quiz-container p,
+body.quiz-page .panel p {
+    color: #334155;
+}
